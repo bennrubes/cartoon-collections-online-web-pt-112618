@@ -1,18 +1,18 @@
 def roll_call_dwarves(dwarves)
-  dwarves.each_with_index do |dwarf, number|
-    puts "#{number + 1}. #{dwarf}"
+  dwarves.each.with_index(1) do |dwarf, number|
+    puts "#{number}. #{dwarf}"
   end
 end
 
 def summon_captain_planet(planeteers)
   planeteers.map do |element|
-    "#{element}!".capitalize
+    "#{element.capitalize}!"
   end
 end
 
 def long_planeteer_calls(calls)
     calls.any? do |call|
-  "#{call}".length > 4
+  call.length > 4
 end
 end
 
